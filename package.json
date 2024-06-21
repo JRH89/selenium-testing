@@ -1,0 +1,18 @@
+{
+  "name": "selenium-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --require esm --timeout 10000 test/*.mjs"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "esm": "^3.2.25",
+    "mocha": "^9.0.0",
+    "selenium-webdriver": "^4.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
