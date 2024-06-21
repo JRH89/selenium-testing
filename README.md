@@ -17,7 +17,7 @@ A suite of Selenium tests using JavaScript.
 git clone https://github.com/jrh89/selenium-testing.git
 
 # Navigate to the project directory
-cd your-repository
+cd selenium-testing
 
 # Install dependencies
 npm install
