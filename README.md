@@ -1,6 +1,9 @@
-# Project Name
+# selenium-testing
 
-Brief description or overview of your project. Mention its purpose and key features.
+A suite of Selenium tests using JavaScript.
+- regression testing
+- smoke tests
+- and more
 
 ## Table of Contents
 
@@ -8,8 +11,6 @@ Brief description or overview of your project. Mention its purpose and key featu
 2. [Usage](#usage)
 
 ## Installation
-
-Provide step-by-step instructions on how to install and set up your project. Include prerequisites and dependencies if necessary.
 
 ```bash
 # Clone the repository
@@ -23,8 +24,6 @@ npm install
 ```
 
 ## Usage
-
-Explain how to use your project, including examples and scenarios. Provide code snippets if applicable.
 
 ```bash
 # Run tests
