@@ -12,19 +12,19 @@ This project provides a suite of Selenium tests for automated browser testing. I
 
 Follow these steps to install and set up the project:
 
-    1. **Clone the repository**: First, you need to clone the repository to your local machine.
+1. **Clone the repository**: First, you need to clone the repository to your local machine.
 
     ```bash
     git clone https://github.com/jrh89/selenium-testing.git
     ```
 
-    2. **Navigate to the project directory**: Change your current directory to the project directory.
+2. **Navigate to the project directory**: Change your current directory to the project directory.
 
     ```bash
     cd selenium-testing
     ```
 
-    3. **Install dependencies**: Install all the necessary dependencies using npm.
+3. **Install dependencies**: Install all the necessary dependencies using npm.
 
     ```bash
     npm install
@@ -46,9 +46,9 @@ The project includes a config.js file where you can set various configuration op
 
 To customize the tests, follow these steps:
 
-    1. **Open the config.js file**: Locate and open the config.js file in the project directory. This file contains configuration settings for various tests.
+1. **Open the config.js file**: Locate and open the config.js file in the project directory. This file contains configuration settings for various tests.
 
-    2. **Modify the configuration settings**: Update the values in the `config.js` file to suit your testing requirements. Below is an example config.js file with explanations of each field:
+2. **Modify the configuration settings**: Update the values in the `config.js` file to suit your testing requirements. Below is an example config.js file with explanations of each field:
 
     ```javascript
     // config.js
@@ -86,7 +86,7 @@ To customize the tests, follow these steps:
     };
     ```
 
-    3. **Example Customization:** If you need to test a different login page with different credentials, update the `config.js` as follows:
+3. **Example Customization:** If you need to test a different login page with different credentials, update the `config.js` as follows:
 
     ```javascript
     // config.js
@@ -124,13 +124,13 @@ To customize the tests, follow these steps:
     };
     ```
 
-    4. **Save the config.js file**: After making the necessary changes, save the file.
+4. **Save the config.js file**: After making the necessary changes, save the file.
 
-    5. **Run the tests**: 
+5. **Run the tests**: 
 
     ```bash
     npm test
     ```
 
-    By following these steps, you can customize the Selenium tests to work with different websites, credentials, and other parameters, making the testing framework versatile and adaptable to various use cases.
+By following these steps, you can customize the Selenium tests to work with different websites, credentials, and other parameters, making the testing framework versatile and adaptable to various use cases.
 
