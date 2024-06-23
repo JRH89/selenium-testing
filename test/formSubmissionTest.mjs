@@ -1,6 +1,6 @@
 import { Builder, By, until } from 'selenium-webdriver';
 import { expect } from 'chai';
-
+import { config } from '../config.js';
 describe('Form Submission Test', function() {
   let driver;
 
@@ -15,31 +15,31 @@ describe('Form Submission Test', function() {
   });
 
   it('should submit form successfully', async function() {
-    await driver.get('http://www.hookerhillstudios.com/Login');
+    await driver.get(config.formSubmissionTest.url);
 
     // Wait for the email input to be located
     const emailField = await driver.wait(until.elementLocated(By.css('input[type="email"]')), 5000);
     const passwordField = await driver.wait(until.elementLocated(By.css('input[type="password"]')), 5000);
 
     // Input credentials
-    await emailField.sendKeys('testuser@testuser.com');
-    await passwordField.sendKeys('Testing123!');
+    await emailField.sendKeys(config.formSubmissionTest.credentials.email);
+    await passwordField.sendKeys(config.formSubmissionTest.credentials.password);
 
-    // Find all buttons and click the one with text 'Login'
+    // Find all buttons and click the one with the specified text
     const buttons = await driver.findElements(By.css('button'));
     for (let button of buttons) {
       const text = await button.getText();
-      if (text === 'Login') {
+      if (text === config.formSubmissionTest.loginButtonText) {
         await button.click();
         break;
       }
     }
 
-    // Wait for redirection to https://www.hookerhillstudios.com
-    await driver.wait(until.urlIs('https://www.hookerhillstudios.com/'), 10000);
+    // Wait for redirection to the expected URL
+    await driver.wait(until.urlIs(config.formSubmissionTest.expectedUrl), 10000);
 
     // Verify the current URL is as expected
     const currentUrl = await driver.getCurrentUrl();
-    expect(currentUrl).to.equal('https://www.hookerhillstudios.com/');
+    expect(currentUrl).to.equal(config.formSubmissionTest.expectedUrl);
   });
 });

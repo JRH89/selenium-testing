@@ -1,6 +1,6 @@
 import { Builder, By, until } from 'selenium-webdriver';
 import { expect } from 'chai';
-
+import { config } from '../config.js';
 describe('Regression Test', function() {
   let driver;
 
@@ -16,12 +16,12 @@ describe('Regression Test', function() {
   });
 
   it('should search for "Selenium WebDriver"', async function() {
-    await driver.get('http://www.google.com');
+    await driver.get(config.google.url);
     const searchBox = await driver.findElement(By.name('q'));
-    await searchBox.sendKeys('Selenium WebDriver');
+    await searchBox.sendKeys(config.google.searchQuery);
     await searchBox.submit();
-    await driver.wait(until.titleContains('Selenium WebDriver'), 5000);
+    await driver.wait(until.titleContains(config.google.expectedTitle), 5000);
     const title = await driver.getTitle();
-    expect(title).to.include('Selenium WebDriver');
+    expect(title).to.include(config.google.expectedTitle);
   });
 });

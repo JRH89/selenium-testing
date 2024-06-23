@@ -1,6 +1,6 @@
 import { Builder } from 'selenium-webdriver';
 import { expect } from 'chai';
-
+import { config } from '../config.js';
 describe('Smoke Test', function() {
   let driver;
 
@@ -16,8 +16,8 @@ describe('Smoke Test', function() {
   });
 
   it('should load Google homepage', async function() {
-    await driver.get('http://www.google.com');
+    await driver.get(config.google.url);
     const title = await driver.getTitle();
-    expect(title).to.equal('Google');
+    expect(title).to.equal(config.google.homeTitle);
   });
 });
