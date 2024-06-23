@@ -7,7 +7,7 @@ This project provides a suite of Selenium tests for automated browser testing. I
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Configuration](#configuration)
-    - [Editing the Configuration](#editing)
+    - [Editing the Configuration](#editingtheconfiguration)
 
 ## Installation
 
